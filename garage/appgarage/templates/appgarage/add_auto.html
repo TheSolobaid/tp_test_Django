@@ -1,0 +1,12 @@
+{% extends "main.html" %} 
+{%block title%}ajout de l'auto {%endblock%}
+{%block grandtitre%}
+    <h1>Ajouter une Auto</h1>
+{%endblock%}
+{%block content%}
+<form method="post" action="/appgarage/traitement/">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input class="send" type="submit" value="terminer">
+        </form>
+    {%endblock%}    

@@ -1,0 +1,19 @@
+{% extends "main.html" %} 
+{%block grandtitre%}
+<h1>bienvenu sur un site de garage</h1>
+{%endblock%}
+{%block content%}
+<a class = "a1" href="/appgarage/add_auto/">ajouter un model de voiture à la base de donnée</a>
+    {% if not liste %}
+        <h2>Cette base de donnée est vide, veuillez la remplire en appuillant sur "ajouter un model de voiture à la base de donnée"</h2>
+        {% endif %}
+            <div class = "d2">
+            {% for i in liste %}
+            <li class="list">{{i.model}} de la marque {{i.marque}}
+                <a class="deta" href="/appgarage/view_auto/{{i.id}}/">Afficher les détails</a>
+                <a class = "supp" href = "/appgarage/delete_auto/{{i.id}}/">effacer</a>
+                <a class = "up" href="/appgarage/update_auto/{{i.id}}/">mise a jour</a>
+            </li>
+            {% endfor %}      
+            </div>  
+{%endblock%}

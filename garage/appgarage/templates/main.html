@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        {% load static %}
+        <link rel="stylesheet" href="{%static 'appgarage/main.css'%}">
+        <title>{% block title %} Auto {% endblock %} </title>
+    </head>
+    <body>
+        <header>
+            <img src="/media/appgarage/image_garage.jpeg" alt="Photo de garage">
+            <a href="/appgarage/">Home</a>
+        </header>
+        {%block grandtitre%}
+            <p>ceci est le titre de page</p>
+        {%endblock%}
+        {%block content%}
+            <p>contenu de page</p>
+        {%endblock%}
+    </body>
+</body>

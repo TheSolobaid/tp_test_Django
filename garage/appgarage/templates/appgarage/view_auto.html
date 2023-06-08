@@ -1,0 +1,19 @@
+{% extends "main.html" %} 
+
+{%block title%} {{auto.model}} {%endblock%}
+{%block grandtitre%}
+    <H1>Model : {{auto.model}}</H1>
+{%endblock%}
+
+{%block content%}
+    <p>issus de la marque : {{auto.marque}}</p>
+    <p>acheté le : {{auto.date_achat|date:"d/m/Y"}}</p>
+    <p>nombre de place : {{auto.nombre_place}}</p>
+    <p>description : {{auto.description}}</p>
+    <p>longuere de l'auto : {{auto.longeur}}</p>
+    {%if auto.clim%}
+        <p>cette auto possède la climatisation</p>
+    {%else%}
+        <p>cette auto ne possède pas la climatisation</p>
+    {%endif%}
+{%endblock%}
